@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  node-proyecto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node-proyecto
+    container_name: node
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/home/node/app
+    network_mode: bridge

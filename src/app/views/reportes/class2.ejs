@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reportes</title>
+    <link 
+      rel="icon" 
+      type="image/png" 
+      href="https://www.pucevirtual.edu.ec/wp-content/uploads/2017/01/iconoceleste.gif"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('../home/header.ejs') %>
+
+    <div class="row">
+      <div class="col-md-6 mt-4 text-center">
+        <form action="/class2" method="POST" class="card-body">
+          <h3 class="card-title">Añadir fechas</h3>
+          <div class="form-group">
+            <input type="date" name="fecha_inicio" id="fecha_inicio" class="form-control"
+            placeholder="Fecha inicio">
+          </div>
+          <div class="form-group">
+            <input type="date" name="fecha_fin" id="fecha_fin" class="form-control"
+            placeholder="Fecha final">
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
